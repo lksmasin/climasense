@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "schedule": ["every saturday"],
+  "ignoreDeps": [
+    "dagger.hilt.android.plugin",
+    "io.objectbox"
+  ],
+  "packageRules": [
+    {
+      "groupName": "Kotlin",
+      "matchPackagePrefixes": [
+        "androidx.compose.compiler",
+        "org.jetbrains.kotlin"
+      ]
+    }
+  ]
+}

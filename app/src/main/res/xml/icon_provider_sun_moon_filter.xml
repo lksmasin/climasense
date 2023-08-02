@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="sun" value="org.climasense.common.ui.images.SunDrawable" />
+    <item name="moon" value="org.climasense.common.ui.images.MoonDrawable" />
+
+</resources>
