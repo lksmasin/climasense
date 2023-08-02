@@ -1,9 +1,9 @@
 <div align="center">
 <br />
-<img src="fastlane/metadata/android/en-US/images/icon.png" width="200" />
+<img src="app/src/main/res/drawable/ic_launcher.png" width="200" />
 </div>
 
-<h1 align="center">climasense</h1>
+<h1 align="center">ClimaSense</h1>
 
 <br />
 
