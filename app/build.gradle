@@ -15,7 +15,7 @@ android {
         applicationId 'org.climasense'
         minSdkVersion 21
         targetSdkVersion 33
-        versionCode 40400
+        versionCode 2
         versionName "1"
 
         multiDexEnabled true
