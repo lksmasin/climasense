@@ -25,7 +25,7 @@ jobs:
           distribution: adopt
 
       - name: Add secrets to local.properties
-        if: startsWith(github.ref, 'refs/tags/') && github.repository == 'breezy-weather/breezy-weather'
+        if: startsWith(github.ref, 'refs/tags/') && github.repository == 'lksmasin/climasense'
         run: |
           set -e
           echo "breezy.accu.key=$ACCU_WEATHER_KEY" >> local.properties
@@ -47,19 +47,19 @@ jobs:
           arguments: assembleStandardRelease
 
       - name: Delete local.properties
-        if: startsWith(github.ref, 'refs/tags/') && github.repository == 'breezy-weather/breezy-weather'
+        if: startsWith(github.ref, 'refs/tags/') && github.repository == 'lksmasin/climasense'
         run: |
           set -e
           rm local.properties
 
       - name: Save version tag in env
-        if: startsWith(github.ref, 'refs/tags/') && github.repository == 'breezy-weather/breezy-weather'
+        if: startsWith(github.ref, 'refs/tags/') && github.repository == 'lksmasin/climasense'
         run: |
           set -x
           echo "VERSION_TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
 
       - name: Sign APK
-        if: startsWith(github.ref, 'refs/tags/') && github.repository == 'breezy-weather/breezy-weather'
+        if: startsWith(github.ref, 'refs/tags/') && github.repository == 'lksmasin/climasense'
         uses: r0adkll/sign-android-release@v1
         with:
           releaseDirectory: app/build/outputs/apk/standard/release
@@ -69,7 +69,7 @@ jobs:
           keyPassword: ${{ secrets.KEY_PASSWORD }}
 
       - name: Prepare APKs with checksums, archive mapping.txt file
-        if: startsWith(github.ref, 'refs/tags/') && github.repository == 'breezy-weather/breezy-weather'
+        if: startsWith(github.ref, 'refs/tags/') && github.repository == 'lksmasin/climasense'
         run: |
           set -e
           mv app/build/outputs/apk/standard/release/app-standard-universal-release-unsigned-signed.apk breezy-weather-${{ env.VERSION_TAG }}.apk
@@ -90,7 +90,7 @@ jobs:
           tar -czvf mapping-${{ env.VERSION_TAG }}.tar.gz --directory=app/build/outputs/mapping/standardRelease/ mapping.txt
 
       - name: Create release
-        if: startsWith(github.ref, 'refs/tags/') && github.repository == 'breezy-weather/breezy-weather'
+        if: startsWith(github.ref, 'refs/tags/') && github.repository == 'lksmasin/climasense'
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ env.VERSION_TAG }}
@@ -109,11 +109,11 @@ jobs:
             | x86         | ${{ env.APK_X86_SHA256 }}         |
             | x86_64      | ${{ env.APK_X86_64_SHA256 }}      |
           files: |
-            breezy-weather-${{ env.VERSION_TAG }}.apk
-            breezy-weather-arm64-v8a-${{ env.VERSION_TAG }}.apk
-            breezy-weather-armeabi-v7a-${{ env.VERSION_TAG }}.apk
-            breezy-weather-x86-${{ env.VERSION_TAG }}.apk
-            breezy-weather-x86_64-${{ env.VERSION_TAG }}.apk
+            climasense-${{ env.VERSION_TAG }}.apk
+            climasense-arm64-v8a-${{ env.VERSION_TAG }}.apk
+            climasense-armeabi-v7a-${{ env.VERSION_TAG }}.apk
+            climasense-x86-${{ env.VERSION_TAG }}.apk
+            climasense-x86_64-${{ env.VERSION_TAG }}.apk
             mapping-${{ env.VERSION_TAG }}.tar.gz
           draft: true
           prerelease: false
