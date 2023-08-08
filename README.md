@@ -14,8 +14,6 @@
   <img alt="material" src="https://custom-icon-badges.demolab.com/badge/material%20you-lightblue?style=for-the-badge&logoColor=333&logo=material-you"/>
   <br />
   <img src="https://img.shields.io/github/license/breezy-weather/breezy-weather?style=for-the-badge" alt="Licence LGPL-3.0" />
-  <img src="https://img.shields.io/github/languages/code-size/breezy-weather/breezy-weather?style=for-the-badge" alt="GitHub code size in bytes" />
-  <br /><br />
   <a href="https://github.com/breezy-weather/breezy-weather/releases/latest">
       <img src="https://img.shields.io/github/v/release/breezy-weather/breezy-weather?color=purple&include_prereleases&logo=github&style=for-the-badge" alt="Download from GitHub" />
   </a>
@@ -25,7 +23,7 @@
 </div>
 
 
-<h4 align="center">climasense is a weather app with a strong focus on design, with a simple, clean UX, smooth animations, and Material Design all over, plus lots of customizability.</h4>
+<h4 align="center">climasense is a weather app with a focus on design, with a simple, clean, beautiful UX, smooth animations, and Material You Design all over, plus lots of customizability.</h4>
 
 <hr />
 
@@ -35,17 +33,19 @@
 
 
 <div align="center">
+</div>
+
 
 # Download
 
-*F-Droid and Google Play will be added as app gets more stable.*
+*More will be added soon.*
 
-<a href="https://apt.izzysoft.de/fdroid/index/apk/org.climasense/">
-<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png"
-alt="Get it on IzzyOnDroid" align="center" height="80" />
+<a href="https://lksmasin.github.io/fdroidrepo/fdroid/repo">
+<img src="https://gitlab.com/fdroid/artwork/-/raw/b928fb601ec95d6643348934fda61bb1b97e8a90/badge/get-it-on.png"
+alt="Get it on F-Droid" align="center" height="80" />
 </a>
 
-<a href="https://github.com/breezy-weather/breezy-weather/releases">
+<a href="https://github.com/lksmasin/climasense/releases">
 <img src="https://user-images.githubusercontent.com/69304392/148696068-0cfea65d-b18f-4685-82b5-329a330b1c0d.png"
 alt="Get it on GitHub" align="center" height="80" />
 </a>
@@ -80,11 +80,11 @@ alt="Get it on GitHub" align="center" height="80" />
 - <details><summary>Multiple weather sources (<a href="docs/SOURCES.md">comparison</a>)</summary>
 
   - Open-Meteo
-  - AccuWeather
+  - AccuWeather (don't working for now)
   - MET Norway
   - OpenWeatherMap
   - Météo France
-  - Mixed China sources
+  - Mixed China sources (don't working for now)
 </details>
 
 - Large selection of home screen widgets for at-a-glance information
